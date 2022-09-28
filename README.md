@@ -8,6 +8,7 @@ distrbuted tracing feature.
 - [ping](ping/): front facing flask service
 - [pong](pong/): behind-the-curtain flask service
 - [web](web/): vanila js browser app
+- [next](next/): browser app built with NextJS
 
 ## New Relic config
 
