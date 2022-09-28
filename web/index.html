@@ -1,0 +1,30 @@
+<script src="newrelic-browser.js"></script>
+
+<script>
+fetch('http://127.0.0.1:5000/ping')
+.then((response) => response.text())
+.then((text) => {
+  document.getElementById('data').innerHTML = text
+  newrelic.noticeError(new Error('error after calling api'))
+  throw new Error('error inside promise will not be sent')
+})
+</script>
+
+<p id="data"></p>
+
+<script>
+console.log('This will not sent to new relic')
+console.error('This will also not sent to new relic')
+</script>
+
+<script>
+throw 'This will result in new relic error with empty message'
+</script>
+
+<script>
+throw new Error('This will result in new relic error with the proper message')
+</script>
+
+<script>
+newrelic.noticeError(new Error('use newrelic.noticeError() to send error'))
+</script>
