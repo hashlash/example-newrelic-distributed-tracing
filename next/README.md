@@ -22,10 +22,14 @@
   }
   ```
 
-- Run the development server:
+- Run the development server, and make sure that the APM Service has been created in your
+  https://one.newrelic.com.
 
   ```
   yarn dev
   ```
+
+- Create the New Relic browser app using [New Relic APM](https://docs.newrelic.com/docs/browser/browser-monitoring/installation/install-browser-monitoring-agent/#copy-paste-app)
+  method.
 
 - Open http://localhost:3000 with your browser to see the result.
